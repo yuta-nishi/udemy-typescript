@@ -2,5 +2,14 @@
   "name": "10-sort",
   "version": "1.0.0",
   "main": "./build/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm:watch\" \"npm:build\"",
+    "build": "tsc -w",
+    "watch": "nodemon ./build/index.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.1.0",
+    "nodemon": "^2.0.22"
+  }
 }
